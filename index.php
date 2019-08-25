@@ -93,15 +93,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Horas de luz</title>
+    <link rel="canonical" href="https://neuronasmuertas.com/horasdeluz" />
+    <meta name="description" content="¿Cuántas horas de luz llevo perdidas desde el 27/08/2019?" />
     <meta property="og:title" content="Horas de luz" />
     <meta property="og:locale" content="es" />
-    <meta name="description" content="¿Cuántas horas de luz llevo perdidas desde el 27/08/2019?" />
     <meta property="og:description" content="¿Cuántas horas de luz llevo perdidas desde el 27/08/2019?" />
-    <link rel="canonical" href="https://neuronasmuertas.com/horasdeluz" />
     <meta property="og:url" content="https://neuronasmuertas.com/horasdeluz/" />
     <meta property="og:site_name" content="Horas de luz" />
+    <meta property="og:image" content="https://neuronasmuertas.com/horasdeluz/img/sol_logo.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@kokuma" />
+    <meta name="twitter:image" content="https://neuronasmuertas.com/horasdeluz/img/sol_logo.png" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <style>
         .bg-mad-dark {
@@ -216,7 +218,7 @@
         </div>
         <div class="jumbotron mt-3 pt-3 pb-1">
             <p class="lead mb-0">Esta página muestra la diferencia de horas de luz -día a día y acumulada desde el 27/08/19- entre Madrid y Copenhague.</p>
-            <p class="lead">Hecha por <a class="btn btn-link" href="https://twitter.com/kokuma">@kokuma</a>. Gracias a <a class="btn btn-link" href="https://twitter.com/daniseuba">@daniseuba</a> por ayudarme a organizar el contenido. Código disponible en <a class="btn btn-link" href="https://github.com/juanalonso">GitHub</a>.</p>
+            <p class="lead">Hecha por <a class="btn btn-link" href="https://twitter.com/kokuma">@kokuma</a>. Gracias a <a class="btn btn-link" href="https://twitter.com/daniseuba">@daniseuba</a> por ayudarme a organizar el contenido. Código disponible en <a class="btn btn-link" href="https://github.com/juanalonso/horasdeluz">GitHub</a>.</p>
         </div>
     </div>
 
