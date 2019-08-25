@@ -1,5 +1,7 @@
 <?php
 
+    require_once('config/config.php');
+
     $bgMadDark = "#e03854";
     $bgCphDark = "#3262b5";
 
@@ -75,22 +77,28 @@
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=<?=$googleID?>"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '<?=$googleID?>');
+    </script>   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Horas de luz</title>
-    <meta name="generator" content="Jekyll v3.8.5" />
     <meta property="og:title" content="Horas de luz" />
     <meta property="og:locale" content="es" />
-    <meta name="description" content="¿Cuántas horas de luz llevo perdidas?" />
-    <meta property="og:description" content="¿Cuántas horas de luz llevo perdidas?" />
-    <link rel="canonical" href="https://neuronasmuertas.com/horasdesol" />
-    <meta property="og:url" content="https://neuronasmuertas.com/horasdeso/" />
+    <meta name="description" content="¿Cuántas horas de luz llevo perdidas desde el 27/08/2019?" />
+    <meta property="og:description" content="¿Cuántas horas de luz llevo perdidas desde el 27/08/2019?" />
+    <link rel="canonical" href="https://neuronasmuertas.com/horasdeluz" />
+    <meta property="og:url" content="https://neuronasmuertas.com/horasdeluz/" />
     <meta property="og:site_name" content="Horas de luz" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@kokuma" />
