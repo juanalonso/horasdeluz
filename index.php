@@ -2,12 +2,15 @@
 
     require_once('config/config.php');
 
+    date_default_timezone_set('Europe/Madrid');
+
     $bgMadDark = "#e03854";
     $bgCphDark = "#3262b5";
 
     $dateStart = DateTime::createFromFormat (DATE_ATOM, '2019-08-27T00:00:00+00:00');
     $dateEnd = new DateTime();
     $dateEnd->setTimezone(new DateTimeZone('Europe/Madrid'));
+    $dateEnd = $dateEnd->modify('+1 day'); 
 
     $dateInterval = new DateInterval('P1D');
     $datePeriod = new DatePeriod($dateStart, $dateInterval ,$dateEnd);
@@ -153,7 +156,7 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-6">
+            <div class="col-md">
                 <div class="bg-cph-dark text-white clearfix pt-3 pb-2 pr-4">
                     <h3 class="float-left pl-4">Copenhague</h3>
                     <?php 
@@ -165,8 +168,22 @@
                     }
                     ?>
                 </div>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Horas de luz</h6>
+                        <h3 class="card-subtitle mb-3 ml-4"><?= $today["cph"]["daylight_h"] ?></h3>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Salida del sol</h6>
+                        <h3 class="card-subtitle mb-3 ml-4"><?= $today["cph"]["sunrise_h"] ?></h3>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Puesta del sol</h6>
+                        <h3 class="card-subtitle ml-4"><?= $today["cph"]["sunset_h"] ?></h3>
+                    </div>
+                </div>
             </div>
-            <div class="col-6">
+            <div class="col-md">
                 <div class="bg-mad-dark text-white clearfix pt-3 pb-2 pr-4">
                     <h3 class="float-left pl-4">Madrid</h3>
                     <?php 
@@ -178,32 +195,20 @@
                     }
                     ?>                    
                 </div>
-            </div>
-        </div>
-        <div class="row mt-3">
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Horas de luz</h6>
-                <h3 class="card-subtitle mb-3 ml-4"><?= $today["cph"]["daylight_h"] ?></h3>
-            </div>
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Salida del sol</h6>
-                <h3 class="card-subtitle mb-3 ml-4"><?= $today["cph"]["sunrise_h"] ?></h3>
-            </div>
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Puesta del sol</h6>
-                <h3 class="card-subtitle ml-4"><?= $today["cph"]["sunset_h"] ?></h3>
-            </div>
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Horas de luz</h6>
-                <h3 class="card-subtitle mb-3 ml-4"><?= $today["mad"]["daylight_h"] ?></h3>
-            </div>
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Salida del sol</h6>
-                <h3 class="card-subtitle mb-3 ml-4"><?= $today["mad"]["sunrise_h"] ?></h3>
-            </div>
-            <div class="col-2">
-                <h6 class="card-subtitle mb-1 ml-4">Puesta del sol</h6>
-                <h3 class="card-subtitle ml-4"><?= $today["mad"]["sunset_h"] ?></h3>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Horas de luz</h6>
+                        <h3 class="card-subtitle mb-3 ml-4"><?= $today["mad"]["daylight_h"] ?></h3>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Salida del sol</h6>
+                        <h3 class="card-subtitle mb-3 ml-4"><?= $today["mad"]["sunrise_h"] ?></h3>
+                    </div>
+                    <div class="col-4">
+                        <h6 class="card-subtitle mb-1 ml-4">Puesta del sol</h6>
+                        <h3 class="card-subtitle ml-4"><?= $today["mad"]["sunset_h"] ?></h3>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="row mt-5 mb-5">
