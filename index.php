@@ -119,9 +119,9 @@
             color:#fff;
             background-color:<?=$bgCphDark?>;
             border-color:<?=$bgCphDark?>;
-            font-size: 1rem;
+            font-size: 0.9rem;
             vertical-align: baseline;
-            padding: 0rem 0.3rem;
+            padding: 0rem 0.2rem;
         }
         .btn-link:hover {
             color:#fff;
@@ -141,9 +141,13 @@
             line-height:1.2;
         }
         .lead {
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-weight: 300;
-        }   
+        } 
+        .h6, h6 {
+            font-size: 0.9rem;
+            font-weight: 400;
+        }  
     </style>
 </head>
 
