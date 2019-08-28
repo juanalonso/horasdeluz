@@ -136,7 +136,7 @@
             margin-top: .15rem !important;
         }
         .display-5 {
-            font-size:3rem;
+            font-size:2rem;
             font-weight:300;
             line-height:1.2;
         }
@@ -153,16 +153,22 @@
 
 <body>
     <div class="container">
-        <div class="jumbotron pt-1 pb-1">
+        <div class="jumbotron pt-1 pb-1 d-none d-sm-block">
             <div class="row">
-                <div class="col-6"><h4>Horas de luz</h3></div>
-                <div class="col-6"> <h4 class="float-right"><?= $today["date"] ?></h3></div>
+                <div class="col"><h4>Horas de luz</h4></div>
+                <div class="col"> <h4 class="float-right"><?= $today["date"] ?></h4></div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="jumbotron pt-1 pb-1 d-block d-sm-none">
+            <div class="row">
+                <div class="col"><h5>Horas de luz</h5></div>
+                <div class="col"> <h5 class="float-right"><?= $today["date"] ?></h5></div>
+            </div>
+        </div>
+        <div class="row mt-2">
             <div class="col-md">
-                <div class="bg-cph-dark text-white clearfix pt-3 pb-2 pr-4">
-                    <h3 class="float-left pl-4">Copenhague</h3>
+                <div class="bg-cph-dark text-white clearfix pt-2 pb-1 pr-3">
+                    <h3 class="float-left pl-3">Copenhague</h3>
                     <?php 
                     if ($today["diff"]>0) {
                     ?>
@@ -188,8 +194,8 @@
                 </div>
             </div>
             <div class="col-md">
-                <div class="bg-mad-dark text-white clearfix pt-3 pb-2 pr-4">
-                    <h3 class="float-left pl-4">Madrid</h3>
+                <div class="bg-mad-dark text-white clearfix pt-2 pb-1 pr-3">
+                    <h3 class="float-left pl-3">Madrid</h3>
                     <?php 
                     if ($today["diff"]<=0) {
                     ?>
@@ -217,7 +223,7 @@
         </div>
         <div class="row mt-5 mb-5">
             <div class="col">
-            <h1 class="display-5">En <?= $today["day"] ?> día<?=($today["day"]!=1)?"s":""?> he <?= $today["total"]<0 ? "perdido" : "ganado"?> <?= $today["total_h"] ?> horas de luz</h1>
+            <h1>En <?= $today["day"] ?> día<?=($today["day"]!=1)?"s":""?> he <?= $today["total"]<0 ? "perdido" : "ganado"?> <?= $today["total_h"] ?> horas de luz</h3>
             </div>
         </div>
         <div class="row">
